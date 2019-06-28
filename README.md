@@ -106,26 +106,6 @@ basepiper() {
 }
 ```
 
-You can mark functions as internal if they are not meant to be used publicly using a tag called ``Internal``:
-```
-#@ Internal: yes
-#@ Usage: _rickroll
-#@ Arguments: does not take any
-#@ argspec_method: does not take any arguments
-#@ This function, if guessed and called by the user, tries to detect a web browser program and display rickroll. And no, it won't appear in the docs.
-_rickroll() {
-	RICKROLL_URL="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-	if command -v firefox > /dev/null 2>&1; then
-		firefox "$RICKROLL_URL"
-	elif test `uname` = "Darwin"; then
-		open -a Safari "$RICKROLL_URL"
-	else
-		xdg-open "$RICKROLL_URL"
-	fi
-	return $?
-}
-```
-
 To document variables, use the ``Variable`` tag:
 ```
 #@ Variable: yes
