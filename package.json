@@ -2,7 +2,7 @@
   "name": "shelldoc",
   "version": "0.2.1",
   "description": "A tool for generating Markdown documentation of shell scripts",
-  "install": "install -b shelldoc.sh ${PREFIX:-/usr/local}/bin/shelldoc",
+  "install": "install -b shelldoc.sh /usr/local/bin/shelldoc",
   "scripts": [ "shelldoc.sh" ]
 }
 

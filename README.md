@@ -4,6 +4,20 @@
 markdown output from special ShellDoc comments (``#@`` ones) that are usually located right before a function (or 
 variable) declaration starts.
 
+## Installation
+The recommended method is to install ShellDoc using [bpkg (Bash Package Manager)](http://www.bpkg.sh/) like this:
+```
+# install bpkg first
+curl -sLo- http://get.bpkg.sh | sudo bash
+# now install shelldoc
+bpkg install timkoi/shelldoc
+```
+Alternatively, you can manually install ShellDoc from sources by fetching shelldoc.sh and installing it to /usr/bin, /usr/local/bin or any other directory in $PATH. For example:
+```
+git clone https://gitlab.com/timkoi/shelldoc.git
+sudo install -b ./shelldoc/shelldoc.sh /usr/local/bin/shelldoc
+```
+
 ## Example of ShellDoc output
 Here is an example script with one function and one variable:
 ```
