@@ -1,0 +1,13 @@
+stages:
+  - test
+
+test:
+   stage: test
+   script:
+   - apt-get update
+   - apt-get install curl -y
+   - curl -sL -o install-bpkg.sh http://get.bpkg.sh
+   - chmod -v 755 install-bpkg.sh
+   - sh ./install-bpkg.sh
+   - bpkg update
+   - bpkg install timkoi/shelldoc -g

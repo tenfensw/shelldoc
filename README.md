@@ -9,8 +9,8 @@ The recommended method is to install ShellDoc using [bpkg (Bash Package Manager)
 ```
 # install bpkg first
 curl -sLo- http://get.bpkg.sh | sudo bash
-# now install shelldoc
-bpkg install timkoi/shelldoc
+# now install ShellDoc to /usr/local/bin
+bpkg install timkoi/shelldoc -g
 ```
 Alternatively, you can manually install ShellDoc from sources by fetching shelldoc.sh and installing it to /usr/bin, /usr/local/bin or any other directory in $PATH. For example:
 ```
