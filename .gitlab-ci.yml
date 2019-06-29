@@ -5,7 +5,7 @@ test:
    stage: test
    script:
    - apt-get update
-   - apt-get install curl -y
+   - apt-get install curl git -y
    - curl -sL -o install-bpkg.sh http://get.bpkg.sh
    - chmod -v 755 install-bpkg.sh
    - sh ./install-bpkg.sh
